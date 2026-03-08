@@ -93,15 +93,17 @@ bool SC7A20::initalize() {
 }
 
 void SC7A20::getAxisReadings(int16_t &x, int16_t &y, int16_t &z) {
-  // We can tell the accelerometer to output in LE mode which makes this simple
-  uint16_t sensorData[3] = {0, 0, 0};
+  const uint8_t address   = isInImitationMode ? SC7A20_ADDRESS2 : SC7A20_ADDRESS;
+  const uint8_t xRegister = isInImitationMode ? SC7A20_OUT_X_L_ALT : SC7A20_OUT_X_L;
+  uint16_t      sensorDataX = 0, sensorDataY = 0, sensorDataZ = 0;
 
-  if (ACCEL_I2C_CLASS::Mem_Read(isInImitationMode ? SC7A20_ADDRESS2 : SC7A20_ADDRESS, isInImitationMode ? SC7A20_OUT_X_L_ALT : SC7A20_OUT_X_L, (uint8_t *)sensorData, 6) == false) {
+  if (!ACCEL_I2C_CLASS::Mem_Read(address, xRegister,       (uint8_t *)&sensorDataX, 2) ||
+      !ACCEL_I2C_CLASS::Mem_Read(address, SC7A20_OUT_Y_L,  (uint8_t *)&sensorDataY, 2) ||
+      !ACCEL_I2C_CLASS::Mem_Read(address, SC7A20_OUT_Z_L,  (uint8_t *)&sensorDataZ, 2)) {
     x = y = z = 0;
     return;
   }
-  // Shift 6 to make its range ~= the other accelerometers
-  x = sensorData[0];
-  y = sensorData[1];
-  z = sensorData[2];
+  x = sensorDataX;
+  y = sensorDataY;
+  z = sensorDataZ;
 }
