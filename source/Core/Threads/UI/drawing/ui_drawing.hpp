@@ -18,11 +18,12 @@ void ui_draw_homescreen_detailed(TemperatureType_t tipTemp);     // Drawing the 
 void ui_draw_homescreen_simplified(TemperatureType_t tipTemp);   // Drawing the home screen -- Simple mode
 void ui_pre_render_assets(void);                                 // If any assets need to be pre-rendered into ram
 // Soldering mode
-void ui_draw_soldering_power_status(bool boost_mode_on);
-void ui_draw_soldering_basic_status(bool boostModeOn);
+void ui_draw_soldering_power_status(bool boost_mode_on, bool showWaterSpirit);
+void ui_draw_soldering_basic_status(bool boostModeOn, bool showWaterSpirit);
 void ui_draw_soldering_detailed_sleep(TemperatureType_t tipTemp);
 void ui_draw_soldering_basic_sleep(TemperatureType_t tipTemp);
 void ui_draw_soldering_profile_advanced(TemperatureType_t tipTemp, TemperatureType_t profileCurrentTargetTemp, uint32_t phaseElapsedSeconds, uint32_t phase, const uint32_t phaseTimeGoal);
+void ui_draw_soldering_water_spirit(int16_t y, int16_t z);
 
 // Temp change
 void ui_draw_temperature_change(void);

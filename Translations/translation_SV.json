@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Soldering\nTip Type",
       "description": "Select the tip type fitted"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Vattenpass",
+      "description": "Visa vattenpass när nästan vertikalt"
     }
   }
 }

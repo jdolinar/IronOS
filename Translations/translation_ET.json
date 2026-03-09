@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Soldering\nTip Type",
       "description": "Select the tip type fitted"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Vesilood",
+      "description": "Kuva vesilood, kui peaaegu vertikaalne"
     }
   }
 }

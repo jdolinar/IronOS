@@ -139,11 +139,19 @@ OperatingMode gui_solderingMode(const ButtonState buttons, guiContext *cxt) {
     setBuzzer(false);
   }
 
-  // Draw in the screen details
+  bool showWaterSpirit = false;
+  if (getSettingValue(SettingsOptions::DetailedHeatInsert)) {
+    int16_t x = accelX;
+    int16_t y = accelY;
+    int16_t z = accelZ;
+
+    showWaterSpirit = (y >= -4000 && y <= 4000) && (z >= -4000 && z <= 4000);
+  } 
+ 
   if (getSettingValue(SettingsOptions::DetailedSoldering)) {
-    ui_draw_soldering_power_status(cxt->scratch_state.state2);
+    ui_draw_soldering_power_status(cxt->scratch_state.state2, showWaterSpirit);
   } else {
-    ui_draw_soldering_basic_status(cxt->scratch_state.state2);
+    ui_draw_soldering_basic_status(cxt->scratch_state.state2, showWaterSpirit);
   }
 
   bool detailedView = getSettingValue(SettingsOptions::DetailedIDLE) && getSettingValue(SettingsOptions::DetailedSoldering);

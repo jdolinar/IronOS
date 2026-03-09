@@ -3,7 +3,7 @@
 #include <OperatingModes.h>
 #ifdef OLED_128x32
 
-void ui_draw_soldering_power_status(bool boost_mode_on) {
+void ui_draw_soldering_power_status(bool boost_mode_on, bool showWaterSpirit) {
   if (OLED::getRotation()) {
     OLED::setCursor(50, 0);
   } else {

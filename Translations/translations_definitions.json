@@ -581,6 +581,13 @@
       "maxLen": 7,
       "maxLen2": 15,
       "description": "For manually selecting the type of tip fitted"
+    },
+    {
+      "id": "AdvancedHeatInsert",
+      "maxLen": 7,
+      "maxLen2": 15,
+      "description": "Show water spirit when vertical"
     }
+
   ]
 }

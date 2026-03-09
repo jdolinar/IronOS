@@ -45,6 +45,7 @@ static void setTempF(void);
 static void displayTempF(void);
 static void displayAdvancedSolderingScreens(void);
 static void displayAdvancedIDLEScreens(void);
+static void displayAdvancedHeatInsertScreens(void);
 static void displayScrollSpeed(void);
 static void displayReverseButtonTempChangeEnabled(void);
 static void displayReverseButtonSettings(void);
@@ -383,6 +384,7 @@ const menuitem UIMenu[] = {
    *  Logo Timeout
    *  Detailed IDLE
    *  Detailed Soldering
+   *  Detailed Heat Insert
    */
   /* Temperature units, this has to be the first element in the array to work with the logic in enterUIMenu() */
   {SETTINGS_DESC(SettingsItemIndex::TemperatureUnit), setTempF, displayTempF, nullptr, SettingsOptions::TemperatureInF, SettingsItemIndex::TemperatureUnit, 7},
@@ -412,6 +414,8 @@ const menuitem UIMenu[] = {
   {SETTINGS_DESC(SettingsItemIndex::AdvancedIdle), nullptr, displayAdvancedIDLEScreens, nullptr, SettingsOptions::DetailedIDLE, SettingsItemIndex::AdvancedIdle, 7},
   /* Advanced soldering screen */
   {SETTINGS_DESC(SettingsItemIndex::AdvancedSoldering), nullptr, displayAdvancedSolderingScreens, nullptr, SettingsOptions::DetailedSoldering, SettingsItemIndex::AdvancedSoldering, 7},
+  /* Advanced heat insert screen */
+  {SETTINGS_DESC(SettingsItemIndex::AdvancedHeatInsert), nullptr, displayAdvancedHeatInsertScreens, nullptr, SettingsOptions::DetailedHeatInsert, SettingsItemIndex::AdvancedHeatInsert, 7},
   /* vvvv end of menu marker. DO NOT REMOVE vvvv */
   {0, nullptr, nullptr, nullptr, SettingsOptions::SettingsOptionsLength, SettingsItemIndex::NUM_ITEMS, 0}
   /* ^^^^ end of menu marker. DO NOT REMOVE ^^^^ */
@@ -911,6 +915,8 @@ static void displayLogoTime(void) {
 static void displayAdvancedIDLEScreens(void) { OLED::drawCheckbox(getSettingValue(SettingsOptions::DetailedIDLE)); }
 
 static void displayAdvancedSolderingScreens(void) { OLED::drawCheckbox(getSettingValue(SettingsOptions::DetailedSoldering)); }
+
+static void displayAdvancedHeatInsertScreens(void) { OLED::drawCheckbox(getSettingValue(SettingsOptions::DetailedHeatInsert)); }
 
 #ifdef BLE_ENABLED
 static void displayBluetoothLE(void) { OLED::drawCheckbox(getSettingValue(SettingsOptions::BluetoothLE)); }

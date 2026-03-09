@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Löt-\nspitzentyp",
       "description": "Wählen Sie den Typ der eingesetzten Spitze"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Wasser-\nwaage",
+      "description": "Wasserwaage anzeigen wenn fast senkrecht"
     }
   }
 }

@@ -1,8 +1,9 @@
 #include "power.hpp"
 #include "ui_drawing.hpp"
+#include <OperatingModes.h>
 #ifdef OLED_96x16
 
-void ui_draw_soldering_basic_status(bool boostModeOn) {
+void ui_draw_soldering_basic_status(bool boostModeOn, bool showWaterSpirit) {
   OLED::setCursor(0, 0);
   // We switch the layout direction depending on the orientation of the oled
   if (OLED::getRotation()) {
@@ -38,7 +39,11 @@ void ui_draw_soldering_basic_status(bool boostModeOn) {
     // Space out gap between battery <-> temp
     OLED::print(LargeSymbolSpace, FontStyle::LARGE);
 
-    ui_draw_power_source_icon();
+    if (showWaterSpirit) {
+      drawWaterSpirit(accelY, accelZ);
+    } else {
+      ui_draw_power_source_icon();
+    }
   }
 }
 #endif

@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Lodde\nTip Typen",
       "description": "Vælg den type tip der er monteret"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Vaterpas",
+      "description": "Vis vaterpas når næsten lodret"
     }
   }
 }

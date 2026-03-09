@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Tipo de\nTpunta",
       "description": "Selecciona la punta montada"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Nivel de\nagua",
+      "description": "Mostrar nivel de agua cuando casi vertical"
     }
   }
 }

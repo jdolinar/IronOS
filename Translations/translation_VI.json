@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Soldering\nTip Type",
       "description": "Select the tip type fitted"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Thủy\nbình",
+      "description": "Hiển thị thủy bình khi gần thẳng đứng"
     }
   }
 }

@@ -3,7 +3,7 @@
 #include <OperatingModes.h>
 #ifdef OLED_96x16
 
-void ui_draw_soldering_power_status(bool boost_mode_on) {
+void ui_draw_soldering_power_status(bool boost_mode_on, bool showWaterSpirit) {
   if (OLED::getRotation()) {
     OLED::setCursor(50, 0);
   } else {
@@ -63,7 +63,11 @@ void ui_draw_soldering_power_status(bool boost_mode_on) {
   } else {
     OLED::setCursor(67, 8);
   }
-  printVoltage();
-  OLED::print(SmallSymbolVolts, FontStyle::SMALL);
+  if (showWaterSpirit) {
+    drawWaterSpirit(accelY,accelZ);
+  } else {
+    printVoltage();
+    OLED::print(SmallSymbolVolts, FontStyle::SMALL);
+  }
 }
 #endif

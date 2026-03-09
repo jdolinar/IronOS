@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Тып\nджала",
       "description": "Абярыце тып усталяванага джала"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Водны\nўзровень",
+      "description": "Паказваць водны ўзровень пры амаль вертыкальным становішчы"
     }
   }
 }

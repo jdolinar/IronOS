@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Soldering\nTip Type",
       "description": "Select the tip type fitted"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Waterpas",
+      "description": "Waterpas weergeven als bijna verticaal"
     }
   }
 }

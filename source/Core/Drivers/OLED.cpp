@@ -790,6 +790,17 @@ void OLED::drawFilledRect(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, bool c
   }
 }
 
+void OLED::drawRect(uint8_t x0, uint8_t y0, uint8_t x1, uint8_t y1, bool filled) {
+  drawFilledRect(x0, y0, x1, y0, false); // top edge
+  drawFilledRect(x0, y1, x1, y1, false); // bottom edge
+  drawFilledRect(x0, y0, x0, y1, false); // left edge
+  drawFilledRect(x1, y0, x1, y1, false); // right edge
+
+  if (filled && x1 > x0 + 1 && y1 > y0 + 1) {
+    drawFilledRect(x0 + 1, y0 + 1, x1 - 1, y1 - 1, false);
+  }
+}
+
 void OLED::drawHeatSymbol(uint8_t state) {
   // Draw symbol 14
   // Then draw over it, the bottom 5 pixels always stay. 8 pixels above that are

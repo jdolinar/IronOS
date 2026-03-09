@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Soldering\nTip Type",
       "description": "Select the tip type fitted"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Vodní\nbublina",
+      "description": "Zobrazit vodní bublinu při téměř svislé poloze"
     }
   }
 }

@@ -2,7 +2,7 @@
 #include "ui_drawing.hpp"
 #ifdef OLED_128x32
 
-void ui_draw_soldering_basic_status(bool boostModeOn) {
+void ui_draw_soldering_basic_status(bool boostModeOn, bool showWaterSpirit) {
   OLED::setCursor(0, 0);
   // We switch the layout direction depending on the orientation of the oled
   if (OLED::getRotation()) {

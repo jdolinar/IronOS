@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Type\nde panne",
       "description": "Séléctionner le type de panne utilisé"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Niveau\nà bulle",
+      "description": "Afficher le niveau à bulle quand presque vertical"
     }
   }
 }

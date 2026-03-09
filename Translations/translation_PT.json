@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Soldering\nTip Type",
       "description": "Select the tip type fitted"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Nível de\nágua",
+      "description": "Mostrar nível de água quando quase vertical"
     }
   }
 }

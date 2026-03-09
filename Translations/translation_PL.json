@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Typ grotu",
       "description": "Wybierz typ zamontowanego grotu"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Pozio-\nmica",
+      "description": "Pokaż poziomnicę gdy prawie pionowo"
     }
   }
 }

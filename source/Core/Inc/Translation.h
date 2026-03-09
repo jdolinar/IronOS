@@ -108,7 +108,8 @@ enum class SettingsItemIndex : uint8_t {
   SettingsReset,
   LanguageSwitch,
   SolderingTipType,
-  NUM_ITEMS,
+  AdvancedHeatInsert,
+  NUM_ITEMS
 };
 
 struct TranslationIndexTable {

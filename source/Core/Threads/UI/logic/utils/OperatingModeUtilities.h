@@ -15,4 +15,5 @@ void     printVoltage(void);                       //
 bool     checkForUnderVoltage(void);               //
 uint16_t min(uint16_t a, uint16_t b);              //
 void     printCountdownUntilSleep(int sleepThres); //
+void     drawWaterSpirit(int16_t y, int16_t z);    // Shows water spirit
 #endif

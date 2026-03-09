@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "焊接头类型",
       "description": "选择安装合适的尖端类型"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "水平\n仪",
+      "description": "几乎垂直时显示水平仪"
     }
   }
 }

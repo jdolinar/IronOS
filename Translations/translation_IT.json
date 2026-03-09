@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Tipo di\npunta",
       "description": "Seleziona il modello della punta in uso"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Livella\nd'acqua",
+      "description": "Mostra livella d'acqua quando quasi verticale"
     }
   }
 }

@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Soldering\nTip Type",
       "description": "Select the tip type fitted"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "水平\n儀",
+      "description": "幾乎垂直時顯示水平儀"
     }
   }
 }

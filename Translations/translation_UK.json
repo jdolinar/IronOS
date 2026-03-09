@@ -346,6 +346,10 @@
     "SolderingTipType": {
       "displayText": "Тип Жала",
       "description": "Оберіть відповідний тип жала"
+    },
+    "AdvancedHeatInsert": {
+      "displayText": "Водний\nрівень",
+      "description": "Показати рівень коли майже вертикально"
     }
   }
 }
