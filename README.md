@@ -3,6 +3,12 @@
 [![Contributors](https://img.shields.io/github/contributors-anon/ralim/ironos?color=blue&style=flat)](https://github.com/Ralim/IronOS/graphs/contributors)
 [![Latest Release](https://img.shields.io/github/v/release/ralim/IronOS)](https://github.com/Ralim/IronOS/releases/latest)
 
+# Spirit Level mod for IronOS
+
+I'll be brief. This mod adds settings and display for Pinecil to show a basic spirit level when using heat inserts. It worked on ny Pinecil v2.
+
+Since all my equipment burned down (unrelated to the mod!) recently I'm archiving this repo. Good luck if it finds you well. 
+
 # IronOS - Open Source Flexible Firmware for Soldering Hardware
 
 _This repository was formerly known as TS100, it's the same great code. Just with more supported devices._
